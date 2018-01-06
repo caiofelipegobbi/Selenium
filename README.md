@@ -8,3 +8,4 @@
  - Selenium dependency - http://docs.seleniumhq.org/download/maven.jsp
  - TestNG dependency - http://testng.org/doc/maven.html
  - Junit dependency - http://junit.org/junit4/dependency-info.html
+ - Extent Reports - http://extentreports.com
