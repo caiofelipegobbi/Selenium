@@ -50,6 +50,12 @@
             <artifactId>selenium-firefox-driver</artifactId>
             <version>3.5.3</version>
         </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
 
     </dependencies>
 
