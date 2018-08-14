@@ -33,6 +33,7 @@ public class TestSetup {
     protected static ExtentReports logger = new ExtentReports();
     protected static ExtentHtmlReporter htmlReporter;
     protected static ExtentTest test;
+    protected static ExtentTest nodeLog;
 
     //Path that will save the logs
     protected static String folderName;
@@ -52,12 +53,12 @@ public class TestSetup {
 
 
     //Method to take a screenshot and append it to a node inside of a main log.
-    public static void takeScreenshotChild(String fileName, String description, ExtentTest child) {
+    public static void takeScreenshotNode(String fileName, String description, ExtentTest nodeLog) {
         try {
             String filePath = home + "/logs/" + folderName + "/screenshot/" + fileName;
             File scrFile = driver.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(scrFile, new File(filePath));
-            child.info(description, MediaEntityBuilder.createScreenCaptureFromPath(filePath).build());
+            nodeLog.info(description, MediaEntityBuilder.createScreenCaptureFromPath(filePath).build());
         } catch (Exception e) {
             e.printStackTrace();
         }
